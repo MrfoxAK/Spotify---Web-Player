@@ -85,7 +85,7 @@ async function displayAlbums() {
                let folder = e.href.split("/").slice(-2)[0];
 
                // Get the meta data of the folder
-               let a = await fetch(`http://127.0.0.1:3000/Projects/Spotify%20Clone/songs/${folder}/info.json`);
+               let a = await fetch(`songs/${folder}/info.json`);
                let response = await a.json();
                console.log(response);
                cardContainer.innerHTML = cardContainer.innerHTML + `<div data-folder="${folder}" class="card">
